@@ -4,6 +4,8 @@ Ext.define('spa.store.ProjectStore', {
     extend: 'Ext.data.Store',
     autoLoad: true,
     autoSync: true,
+    pageSize: 10,
+    pageable: true,
 
     alias: 'store.projectStore',
 
@@ -22,7 +24,8 @@ Ext.define('spa.store.ProjectStore', {
 
         reader: {
             type: 'json',
-            // rootProperty: 'data'
+            totalProperty: 'totalElements',
+            rootProperty: 'content',
         },
 
         api: {

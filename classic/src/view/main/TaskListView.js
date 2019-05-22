@@ -104,7 +104,15 @@ Ext.define('spa.view.main.TaskListView', {
 
                 }
             }
-        ]
+        ],
+        bbar: [{
+            xtype: 'pagingtoolbar',
+            bind:{
+                store: 'taskStore'
+            },
+            displayInfo: true,
+
+        }]
     }],
 
     buttons: [

@@ -3,6 +3,8 @@ Ext.define('spa.store.TaskStore', {
     extend: 'Ext.data.Store',
     autoLoad: true,
     autoSync: true,
+    pageable: true,
+    pageSize: 10,
 
     alias: 'store.taskStore',
 
@@ -21,7 +23,8 @@ Ext.define('spa.store.TaskStore', {
 
         reader: {
             type: 'json',
-            // rootProperty: 'data'
+            totalProperty: 'totalElements',
+            rootProperty: 'content',
         },
 
         api: {

@@ -41,14 +41,14 @@ Ext.define('spa.view.main.Main', {
             flex: 0
         },
         iconCls: 'fa-th-list',
-        items: [
-            {
-                xtype: 'button',
-                text: 'Logout',
-                margin: 10,
-                handler: 'logout'
-            }
-        ]
+        // items: [
+        //     {
+        //         xtype: 'button',
+        //         text: 'Logout',
+        //         margin: 10,
+        //         handler: 'logout'
+        //     }
+        // ]
     },
 
     tabBar: {

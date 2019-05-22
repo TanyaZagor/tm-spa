@@ -81,7 +81,16 @@ Ext.define('spa.view.main.ProjectListView', {
                 }
             }
         ],
+        bbar: [{
+            xtype: 'pagingtoolbar',
+            bind:{
+                store: 'projectStore'
+            },
+            displayInfo: true,
+
+        }]
     }],
+
 
     buttons: [
         {text: 'Clear', handler: 'clearProjects'},
