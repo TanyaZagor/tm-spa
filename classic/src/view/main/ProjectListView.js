@@ -44,6 +44,13 @@ Ext.define('spa.view.main.ProjectListView', {
                 }
             },
             {
+                text: 'Date create',
+                dataIndex: 'dateCreate',
+                xtype: 'datecolumn',
+                format: 'd.m.Y',
+                flex: 1
+            },
+            {
                 text: 'Date start',
                 dataIndex: 'dateStart',
                 xtype: 'datecolumn',

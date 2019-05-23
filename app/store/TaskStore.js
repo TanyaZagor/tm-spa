@@ -5,11 +5,13 @@ Ext.define('spa.store.TaskStore', {
     autoSync: true,
     pageable: true,
     pageSize: 10,
+    remoteSort: true,
+    pageable: true,
 
     alias: 'store.taskStore',
 
     fields: [
-        'name', 'projectId', 'description', 'dateStart', 'dateFinish', 'status'
+        'name', 'projectId', 'description', 'dateCreate', 'dateStart', 'dateFinish', 'status'
     ],
 
     proxy: {

@@ -5,12 +5,13 @@ Ext.define('spa.store.ProjectStore', {
     autoLoad: true,
     autoSync: true,
     pageSize: 10,
+    remoteSort: true,
     pageable: true,
 
     alias: 'store.projectStore',
 
     fields: [
-        'name', 'description', 'dateStart', 'dateFinish', 'status'
+        'name', 'description', 'dateCreate', 'dateStart', 'dateFinish', 'status'
     ],
 
     proxy: {
@@ -19,7 +20,8 @@ Ext.define('spa.store.ProjectStore', {
         writer: {
             type: 'json',
             allowSingle: false,
-            writeAllFields: true
+            writeAllFields: true,
+
         },
 
         reader: {

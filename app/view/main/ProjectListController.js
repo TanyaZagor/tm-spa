@@ -9,6 +9,8 @@ Ext.define('spa.view.main.ProjectListController', {
         var name = prompt('Project name:');
         var project = Ext.create('spa.model.ProjectRecord');
         project.set('name', name);
+        project.set('dateCreate', new Date());
+        project.set('status', 'SCHEDULED');
         store.add(project);
         grid.getView().refresh();
     },

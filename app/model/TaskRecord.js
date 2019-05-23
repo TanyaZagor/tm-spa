@@ -9,6 +9,7 @@ Ext.define('spa.model.TaskRecord', {
         {name: 'projectId', type: 'string'},
         {name: 'name', type: 'string'},
         {name: 'description', type: 'string'},
+        {name: 'dateCreate', type: 'date', dateFormat: 'c'},
         {name: 'dateStart', type: 'date', dateFormat: 'c'},
         {name: 'dateFinish', type: 'data', dateFormat: 'c'},
         {name: 'status', type: 'string'}

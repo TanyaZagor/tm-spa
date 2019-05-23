@@ -9,6 +9,7 @@ Ext.define('app.view.main.TaskListController', {
         var name = prompt('Task name:');
         var task = Ext.create('spa.model.TaskRecord');
         task.set('name', name);
+        task.set('dateCreate', new Date());
         store.add(task);
         grid.getView().refresh();
     },

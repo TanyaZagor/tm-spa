@@ -67,6 +67,13 @@ Ext.define('spa.view.main.TaskListView', {
                 }
             },
             {
+                text: 'Date create',
+                dataIndex: 'dateCreate',
+                xtype: 'datecolumn',
+                format: 'd.m.Y',
+                flex: 1
+            },
+            {
                 text: 'Date start',
                 dataIndex: 'dateStart',
                 xtype: 'datecolumn',
@@ -75,7 +82,6 @@ Ext.define('spa.view.main.TaskListView', {
                 editor: {
                     xtype: 'datefield',
                     format: 'd.m.y'
-
                 }
             },
             {
