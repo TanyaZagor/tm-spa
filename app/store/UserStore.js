@@ -16,12 +16,11 @@ Ext.define('spa.store.UserStore', {
         },
 
         reader: {
-            type: 'json',
-            // rootProperty: 'data'
+            type: 'json'
         },
 
         api: {
-            read: '/api/user',
+            read: '/api/login',
             create: '/api/user/merge',
             update: '/api/user/merge',
             destroy: '/api/user/delete'

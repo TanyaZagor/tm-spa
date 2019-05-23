@@ -8,7 +8,7 @@ Ext.define('spa.view.login.Login', {
         'Ext.form.Panel'
     ],
 
-    controller: 'login',
+    controller: 'loginController',
     bodyPadding: 10,
     title: 'Login',
     closable: false,
@@ -17,8 +17,7 @@ Ext.define('spa.view.login.Login', {
     items: {
         xtype: 'form',
         reference: 'form',
-        //url: '/api/login',
-
+        url: '/api/login',
         items: [
             {
                 xtype: 'textfield',
@@ -41,8 +40,5 @@ Ext.define('spa.view.login.Login', {
                 handler: 'signIn'
             }
         ]
-
     }
-
-
 });

@@ -20,11 +20,11 @@ Ext.define('spa.Application', {
     ],
 
     launch: function () {
-        // var loggedIn;
-        // loggedIn = localStorage.getItem("UserLoggedIn")
-        // Ext.create({
-        //     xtype: loggedIn ? 'app-main' : 'login'
-        // });
+        var loggedIn;
+        loggedIn = localStorage.getItem("UserLoggedIn");
+        Ext.create({
+            xtype: loggedIn ? 'app-main' : 'login'
+        });
     },
 
     onAppUpdate: function () {
