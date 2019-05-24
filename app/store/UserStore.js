@@ -20,10 +20,10 @@ Ext.define('spa.store.UserStore', {
         },
 
         api: {
-            read: '/api/login',
-            create: '/api/user/merge',
-            update: '/api/user/merge',
-            destroy: '/api/user/delete'
+            read: '/api/user'
+            // create: '/api/user/merge',
+            // update: '/api/user/merge',
+            // destroy: '/api/user/delete'
         }
     }
 });

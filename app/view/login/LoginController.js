@@ -11,7 +11,8 @@ Ext.define('spa.view.login.LoginController', {
     // }
 
     signIn: function () {
-        this.lookupReference('form').submit({
+        this.lookupReference('form').getForm().submit({
+            url: '/login',
             method: 'POST',
             success: function () {
                 localStorage.setItem("UserLoggedIn", true);
@@ -21,6 +22,11 @@ Ext.define('spa.view.login.LoginController', {
                 });
             }
         });
+        // localStorage.setItem("UserLoggedIn", true);
+        // this.getView().destroy();
+        // Ext.create({
+        //     xtype: 'app-main'
+        // });
 
     }
 });
