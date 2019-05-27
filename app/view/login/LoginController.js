@@ -11,22 +11,20 @@ Ext.define('spa.view.login.LoginController', {
     // }
 
     signIn: function () {
-        this.lookupReference('form').getForm().submit({
+        var view = this;
+        var loginForm = this.lookupReference('form').getForm();
+        loginForm.submit({
             url: '/login',
             method: 'POST',
-            success: function () {
+            success: function (form, action) {
                 localStorage.setItem("UserLoggedIn", true);
-                this.getView().destroy();
+                localStorage.setItem("User", user);
+                view.getView().destroy();
                 Ext.create({
                     xtype: 'app-main'
                 });
-            }
-        });
-        // localStorage.setItem("UserLoggedIn", true);
-        // this.getView().destroy();
-        // Ext.create({
-        //     xtype: 'app-main'
-        // });
+            },
 
+        });
     }
 });

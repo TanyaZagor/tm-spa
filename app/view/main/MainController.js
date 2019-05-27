@@ -20,12 +20,20 @@ Ext.define('spa.view.main.MainController', {
     },
 
     logout: function () {
-        localStorage.removeItem('UserLoggedIn');
+        var view = this;
+        Ext.Ajax.request({
+            url: '/logout',
 
-        this.getView().destroy();
+            success: function(response, opts) {
+                localStorage.removeItem('UserLoggedIn');
 
-        Ext.create({
-            xtype: 'login'
+                view.getView().destroy();
+
+                Ext.create({
+                    xtype: 'login'
+                });
+            }
         });
+
     }
 });

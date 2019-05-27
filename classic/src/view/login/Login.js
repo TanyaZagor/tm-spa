@@ -2,6 +2,7 @@ Ext.define('spa.view.login.Login', {
     extend: 'Ext.window.Window',
     xtype: 'login',
     alias: 'widget.login',
+    reference: 'login',
 
     requires: [
         'spa.view.login.LoginController',
@@ -71,10 +72,10 @@ Ext.define('spa.view.login.Login', {
 //             text: 'Оправить',
 //             handler: function() {
 //                 loginForm.getForm().submit({
-//                     url: '/login',
+//                     url: '/auth',
 //                     success: function(form, action){
 //                         localStorage.setItem("UserLoggedIn", true);
-//                         this.getView().destroy();
+//                         loginForm.getView().destroy();
 //                         Ext.create({
 //                             xtype: 'app-main'
 //                         });

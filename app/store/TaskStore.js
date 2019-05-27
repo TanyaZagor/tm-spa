@@ -6,7 +6,6 @@ Ext.define('spa.store.TaskStore', {
     pageable: true,
     pageSize: 10,
     remoteSort: true,
-    pageable: true,
 
     alias: 'store.taskStore',
 

@@ -1,6 +1,9 @@
 Ext.define('spa.store.UserStore', {
     extend: 'Ext.data.Store',
     require: 'spa.model.UserRecord',
+    modal: 'spa.model.UserRecord',
+    alias: 'store.userStore',
+    autoLoad: true,
 
     fields: [
         'login', 'firstName', 'lastName', 'email', 'role'
@@ -26,4 +29,7 @@ Ext.define('spa.store.UserStore', {
             // destroy: '/api/user/delete'
         }
     }
+});
+Ext.create('spa.store.UserStore', {
+    storeId: 'userStore'
 });
