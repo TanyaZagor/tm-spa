@@ -37,7 +37,3 @@ Ext.define('spa.store.TaskStore', {
     }
 });
 
-Ext.create('spa.store.TaskStore', {
-    storeId: 'taskStore'
-});
-

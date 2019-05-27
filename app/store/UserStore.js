@@ -30,6 +30,3 @@ Ext.define('spa.store.UserStore', {
         }
     }
 });
-Ext.create('spa.store.UserStore', {
-    storeId: 'userStore'
-});

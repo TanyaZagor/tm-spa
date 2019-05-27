@@ -13,8 +13,9 @@ Ext.define('spa.view.main.Main', {
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
 
-        'spa.view.main.TaskListView',
         'spa.view.main.ProjectListView',
+        'spa.view.main.TaskListView',
+
         'spa.view.main.MainController',
         'spa.view.main.MainModel',
         'spa.view.main.List'

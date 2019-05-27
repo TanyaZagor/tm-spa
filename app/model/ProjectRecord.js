@@ -11,6 +11,7 @@ Ext.define('spa.model.ProjectRecord', {
         {name: 'dateCreate', type: 'date', dateFormat: 'c'},
         {name: 'dateStart', type: 'date', dateFormat: 'c'},
         {name: 'dateFinish', type: 'date', dateFormat: 'c'},
-        {name: 'status', type: 'string'}
+        {name: 'status', type: 'string'},
+        {name: 'userId', type: 'string'}
     ]
 });

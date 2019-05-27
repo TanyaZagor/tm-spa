@@ -11,6 +11,9 @@ Ext.define('spa.view.main.ProjectListController', {
         project.set('name', name);
         project.set('dateCreate', new Date());
         project.set('status', 'SCHEDULED');
+        var userStore = Ext.data.StoreManager.lookup('userStore');
+        var userId = userStore.getAt(0).get('id');
+        project.set('userId', userId);
         store.add(project);
         grid.getView().refresh();
     },

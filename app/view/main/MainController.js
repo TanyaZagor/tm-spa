@@ -18,6 +18,18 @@ Ext.define('spa.view.main.MainController', {
             //
         }
     },
+    beforeInit: function() {
+        Ext.create('spa.store.ProjectStore', {
+            storeId: 'projectStore'
+        });
+        Ext.create('spa.store.UserStore', {
+            storeId: 'userStore'
+        });
+
+        Ext.create('spa.store.TaskStore', {
+            storeId: 'taskStore'
+        });
+    },
 
     logout: function () {
         var view = this;

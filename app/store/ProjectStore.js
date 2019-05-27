@@ -38,7 +38,3 @@ Ext.define('spa.store.ProjectStore', {
         }
     }
 });
-
-Ext.create('spa.store.ProjectStore', {
-    storeId: 'projectStore'
-});
