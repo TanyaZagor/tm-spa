@@ -4,9 +4,7 @@ Ext.define('spa.store.ProjectStore', {
     extend: 'Ext.data.Store',
     autoLoad: true,
     autoSync: true,
-    pageSize: 10,
     remoteSort: true,
-    pageable: true,
 
     alias: 'store.projectStore',
 

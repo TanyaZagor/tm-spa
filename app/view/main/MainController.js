@@ -20,7 +20,8 @@ Ext.define('spa.view.main.MainController', {
     },
     beforeInit: function() {
         Ext.create('spa.store.ProjectStore', {
-            storeId: 'projectStore'
+            storeId: 'projectStore',
+            //autoLoad: true
         });
         Ext.create('spa.store.UserStore', {
             storeId: 'userStore'

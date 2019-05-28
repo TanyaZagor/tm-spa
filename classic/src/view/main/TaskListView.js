@@ -22,7 +22,7 @@ Ext.define('spa.view.main.TaskListView', {
         plugins: {
             ptype: 'rowediting',
             clicksToEdit: 2,
-            plaginId: 'roweditingId'
+            pluginId: 'roweditingId'
         },
 
         tbar: [
@@ -36,7 +36,7 @@ Ext.define('spa.view.main.TaskListView', {
                 dataIndex: 'name',
                 editor: {
                     xtype: 'textfield',
-                    allowBlanck: false
+                    allowBlank: false
                 }
             },
             {
@@ -45,16 +45,19 @@ Ext.define('spa.view.main.TaskListView', {
                 flex: 1,
                 renderer: function(projectId) {
                     var projectStore = Ext.data.StoreManager.lookup('projectStore');
-                    var id = projectStore.find('id', projectId);
-                    var project = projectStore.getAt(id);
+                    var index = projectStore.find('id', projectId);
+                    var project = projectStore.getAt(index);
                     if (project === null) return '';
                     return project.get('name');
                 },
                 editor: {
                     xtype: 'combobox',
-                    store: 'projectStore',
+                    store: {
+                        type: 'projectStore',
+                        pageSize: 50
+                    },
                     displayField: 'name',
-                    valueField: 'id'
+                    valueField: 'id',
                 }
             },
             {
@@ -63,7 +66,7 @@ Ext.define('spa.view.main.TaskListView', {
                 flex: 1,
                 editor: {
                     xtype: 'textfield',
-                    allowBlanck: true
+                    allowBlank: true
                 }
             },
             {
@@ -116,7 +119,7 @@ Ext.define('spa.view.main.TaskListView', {
             bind:{
                 store: 'taskStore'
             },
-            displayInfo: true,
+            displayInfo: true
 
         }]
     }],

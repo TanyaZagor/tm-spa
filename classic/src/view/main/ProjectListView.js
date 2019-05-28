@@ -13,14 +13,20 @@ Ext.define('spa.view.main.ProjectListView', {
         reference: 'projectListGrid',
         title: 'Project list',
 
-        store: 'projectStore',
+        store: {
+            storeId: 'pageablePStore',
+            type: 'projectStore',
+            //autoLoad: true,
+            pageSize: 10,
+            pageable: true
+        },
 
         selType: 'rowmodel',
 
         plugins: {
             ptype: 'rowediting',
             clicksToEdit: 2,
-            plaginId: 'roweditingId'
+            pluginId: 'roweditingId'
         },
         tbar: [
             {text: 'Create project', handler: 'createProject'},
@@ -32,7 +38,7 @@ Ext.define('spa.view.main.ProjectListView', {
                 dataIndex: 'name',
                 editor: {
                     xtype: 'textfield',
-                    allowBlanck: false
+                    allowBlank: false
                 }},
             {
                 text: 'Description',
@@ -40,7 +46,7 @@ Ext.define('spa.view.main.ProjectListView', {
                 flex: 1,
                 editor: {
                     xtype: 'textfield',
-                    allowBlanck: true
+                    allowBlank: true
                 }
             },
             {
@@ -91,7 +97,7 @@ Ext.define('spa.view.main.ProjectListView', {
         bbar: [{
             xtype: 'pagingtoolbar',
             bind:{
-                store: 'projectStore'
+                store: 'pageablePStore'
             },
             displayInfo: true,
 
