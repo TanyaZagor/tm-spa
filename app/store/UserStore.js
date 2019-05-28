@@ -24,7 +24,7 @@ Ext.define('spa.store.UserStore', {
 
         api: {
             read: '/api/user',
-            create: '/api/signUp',
+            //create: '/api/signUp',
             // update: '/api/user/merge',
             // destroy: '/api/user/delete'
         }

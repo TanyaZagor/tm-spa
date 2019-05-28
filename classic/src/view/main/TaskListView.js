@@ -52,10 +52,7 @@ Ext.define('spa.view.main.TaskListView', {
                 },
                 editor: {
                     xtype: 'combobox',
-                    store: {
-                        type: 'projectStore',
-                        pageSize: 50
-                    },
+                    store: 'projectStore',
                     displayField: 'name',
                     valueField: 'id',
                 }

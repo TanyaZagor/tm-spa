@@ -31,10 +31,12 @@ Ext.define('app.view.main.TaskListController', {
 
     refreshTaskList: function () {
         var grid = this.lookupReference('taskListGrid');
+        // var projectStore = Ext.data.StoreManager.lookup('projectStore');
+        // projectStore.load();
         grid.getStore().load();
     },
 
-    clearTasks: function () {
+clearTasks: function () {
         var grid = this.lookupReference('taskListGrid');
         var store = grid.getStore();
         store.removeAll();

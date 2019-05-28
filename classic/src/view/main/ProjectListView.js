@@ -13,13 +13,7 @@ Ext.define('spa.view.main.ProjectListView', {
         reference: 'projectListGrid',
         title: 'Project list',
 
-        store: {
-            storeId: 'pageablePStore',
-            type: 'projectStore',
-            //autoLoad: true,
-            pageSize: 10,
-            pageable: true
-        },
+        store:'projectStore',
 
         selType: 'rowmodel',
 

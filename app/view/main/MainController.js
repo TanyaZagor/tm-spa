@@ -25,7 +25,6 @@ Ext.define('spa.view.main.MainController', {
         Ext.create('spa.store.UserStore', {
             storeId: 'userStore'
         });
-
         Ext.create('spa.store.TaskStore', {
             storeId: 'taskStore'
         });

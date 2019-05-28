@@ -5,6 +5,8 @@ Ext.define('spa.store.ProjectStore', {
     autoLoad: true,
     autoSync: true,
     remoteSort: true,
+    pageable: true,
+    rageSize: 10,
 
     alias: 'store.projectStore',
 
