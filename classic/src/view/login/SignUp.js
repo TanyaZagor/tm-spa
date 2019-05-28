@@ -8,7 +8,7 @@ Ext.define('spa.view.login.SignUp', {
         'Ext.form.Panel'
     ],
 
-    controller: 'login',
+    controller: 'loginController',
     bodyPadding: 10,
     title: 'SignIn',
     closable: false,
@@ -21,7 +21,7 @@ Ext.define('spa.view.login.SignUp', {
         items: [
             {
                 xtype: 'textfield',
-                name: 'username',
+                name: 'login',
                 fieldLabel: 'Login',
                 allowBlank: false
             },
@@ -55,7 +55,7 @@ Ext.define('spa.view.login.SignUp', {
             {
                 text: 'Sign up',
                 formBind: false,
-                handler: 'signIn'
+                handler: 'signUp'
             }
         ]
 

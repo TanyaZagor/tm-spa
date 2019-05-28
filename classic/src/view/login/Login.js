@@ -40,6 +40,11 @@ Ext.define('spa.view.login.Login', {
                 text: 'Sign in',
                 formBind: true,
                 handler: 'signIn'
+            },
+            {
+                text: 'Sign up',
+                formBind:false,
+                handler: 'getSignUp'
             }
         ]
     }

@@ -17,5 +17,23 @@ Ext.define('spa.view.login.LoginController', {
             },
 
         });
+    },
+
+    signUp: function () {
+        var view = this;
+        var loginForm = this.lookupReference('form').getForm();
+        var user = Ext.create('spa.model.UserRecord',loginForm.getValues());
+        user.save();
+        view.getView().destroy();
+        Ext.create({
+            xtype: 'login'
+        });
+    },
+
+    getSignUp: function () {
+        this.getView().destroy();
+        Ext.create({
+            xtype: 'signUp'
+        });
     }
 });
